@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
             userRegistration.validFirstName();
             userRegistration.validSecondName();
             userRegistration.validEmailId();
+            userRegistration.ValidPhoneNumber();
         }
         public void validFirstName(){
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
@@ -51,6 +52,20 @@ import java.util.regex.Pattern;
                 System.out.println("Email name is Valid");
             else
                 System.out.println("Email name is InValid");
+        }
+        public void ValidPhoneNumber(){
+            Scanner scanner = new Scanner(System.in);
+            Pattern pattern = Pattern.compile("^[9][1]\s[6-9][0-9]{9}$");
+            System.out.println("Enter user Phone number");
+
+            String phoneNumber = scanner.nextLine();
+
+            Matcher match = pattern.matcher(phoneNumber);
+            if (match.matches())
+                System.out.println("Phone number is Valid");
+            else
+                System.out.println("Phone number is InValid");
+
         }
 
 
