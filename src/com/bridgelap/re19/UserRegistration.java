@@ -70,7 +70,8 @@ import java.util.regex.Pattern;
         }
         public void validPassword(){
             Scanner scanner = new Scanner(System.in);
-            Pattern pattern = Pattern.compile("^[a-z]{8,}$");
+           // Pattern pattern = Pattern.compile("^[a-z]{8,}$");
+            Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z]).{8,}$");
             System.out.println("Enter user Password");
 
             String password = scanner.nextLine();
