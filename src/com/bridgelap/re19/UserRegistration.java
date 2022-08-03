@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
         public static void main(String[] args) {
             UserRegistration userRegistration = new UserRegistration();
             userRegistration.validFirstName();
+            userRegistration.validSecondName();
         }
         public void validFirstName(){
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
@@ -23,6 +24,19 @@ import java.util.regex.Pattern;
                 System.out.println("First name is Valid");
             else
                 System.out.println("First name is InValid");
+        }
+        public void validSecondName(){
+            Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter user second name");
+            String fName = scanner.next();
+
+            Matcher match = pattern.matcher(fName);
+            if (match.matches())
+                System.out.println("Second name is Valid");
+            else
+                System.out.println("Second name is InValid");
         }
 
     }
