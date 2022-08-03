@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
             UserRegistration userRegistration = new UserRegistration();
             userRegistration.validFirstName();
             userRegistration.validSecondName();
+            userRegistration.validEmailId();
         }
         public void validFirstName(){
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
@@ -38,6 +39,20 @@ import java.util.regex.Pattern;
             else
                 System.out.println("Second name is InValid");
         }
+        public void validEmailId(){
+            Scanner scanner = new Scanner(System.in);
+            Pattern pattern = Pattern.compile("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2})*$");
+            System.out.println("Enter user email ");
+            scanner.nextLine();
+            String email = scanner.nextLine();
+
+            Matcher match = pattern.matcher(email);
+            if (match.matches())
+                System.out.println("Email name is Valid");
+            else
+                System.out.println("Email name is InValid");
+        }
+
 
     }
 
