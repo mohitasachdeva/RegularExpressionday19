@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
             userRegistration.validSecondName();
             userRegistration.validEmailId();
             userRegistration.ValidPhoneNumber();
+            userRegistration.validPassword();
         }
         public void validFirstName(){
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
@@ -67,7 +68,19 @@ import java.util.regex.Pattern;
                 System.out.println("Phone number is InValid");
 
         }
+        public void validPassword(){
+            Scanner scanner = new Scanner(System.in);
+            Pattern pattern = Pattern.compile("^[a-z]{8,}$");
+            System.out.println("Enter user Password");
 
+            String password = scanner.nextLine();
+
+            Matcher match = pattern.matcher(password);
+            if (match.matches())
+                System.out.println("password is Valid");
+            else
+                System.out.println("password is InValid");
+        }
 
     }
 
