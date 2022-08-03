@@ -72,7 +72,8 @@ import java.util.regex.Pattern;
             Scanner scanner = new Scanner(System.in);
            // Pattern pattern = Pattern.compile("^[a-z]{8,}$");
             //Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z]).{8,}$");
-            Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9a-zA-Z]).{8,}$");
+          //  Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9a-zA-Z]).{8,}$");
+            Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$");
             System.out.println("Enter user Password");
 
             String password = scanner.nextLine();
