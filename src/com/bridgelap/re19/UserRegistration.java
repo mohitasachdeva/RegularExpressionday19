@@ -43,7 +43,8 @@ import java.util.regex.Pattern;
         }
         public void validEmailId(){
             Scanner scanner = new Scanner(System.in);
-            Pattern pattern = Pattern.compile("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2})*$");
+            //Pattern pattern = Pattern.compile("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2})*$");
+            Pattern pattern = Pattern.compile("^[a-z]*.[a-z 0-9]+@[a-z 0-9]+.[a-z]{2,3}(.[a-z]{2,3})*$");
             System.out.println("Enter user email ");
             scanner.nextLine();
             String email = scanner.nextLine();
