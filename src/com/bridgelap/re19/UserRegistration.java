@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
             userRegistration.ValidPhoneNumber();
             userRegistration.validPassword();
         }
-        public void validFirstName(){
+        public void validFirstName()  void UserRegistrationException{
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
 
             Scanner scanner = new Scanner(System.in);
